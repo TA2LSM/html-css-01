@@ -1,0 +1,69 @@
+/* Burada renkler tanımlanıyor */
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+  }
+
+/* HTML'de body kısmına class ismi ekleyip burada o isimle çağırmak lazım */
+/* bg ve fontColor değişkenleri tanımlandı */
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);    
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);    
+}
+
+/* "*" operatörü ile belirtilenler sayfadaki HER ELEMENTE uygulanır */
+/* sadece özel isim ile belirtilmiş ifadeler bunun üzerine yazabilir */
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+body {
+    background: var(--bg);
+}
+
+ul {
+    font-family: helvetica;
+}
+
+/* tüm list item'lar başında "yuvarlak" olarak yazılacak */
+li {
+    list-style: circle;
+}
+/* 
+"." ifadesi ile class ismini işaret ediyoruz. Class ismi
+"list" olanlar başında "kare" ile yazılacak.
+*/
+.list {
+    list-style: square;
+}
+
+
+.btn {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);    
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    height: 25px;
+    width: 50px;
+    border-radius: 10%; /* 50% */
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus { outline-style: none; }
+
+/*
+#msg {
+    font-family: monospace;
+}
+*/
